@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data_retrive</title>
+</head>
+<body>
+    <center>
+        <h1>Data_retrive</h1>
+        <form method="post">
+            {% csrf_token %}
+            <select name="rdata" id="rdata" multiple>
+                <label for="rdata">TOPIC_NAME</label>
+                {% for i in rl %}
+                  <option value="{{ i }}">{{ i.topic_name }}</option>
+                {% endfor %}
+            </select><br>
+            <input type="submit" value="submit">
+
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage_creation</title>
+</head>
+<body>
+    <center>
+        <h1>Webpage_Table</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="wdata">TOPIC_NAME</label>
+            <select name="wdata" id="wdata">
+                {% for i in wl %}
+                <option value="{{ i }}">{{ i.topic_name }}</option>
+                {% endfor %}
+            </select><br><br>
+            <label for="na">NAME</label>
+            <input type="text" name="na" id="na"><br><br>
+            <label for="ur">URL</label>
+            <input type="url" name="ur" id="ur"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </center>
+</body>
+</html>

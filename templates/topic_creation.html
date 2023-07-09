@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic_creation</title>
+</head>
+<body>
+    <center>
+        <h1>Topic_Table</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="tn">Topicname</label>
+            <input type="text" name="tn" id="tn">
+            <input type="submit" value="submit">
+        </form>
+    </center>
+</body>
+</html>
